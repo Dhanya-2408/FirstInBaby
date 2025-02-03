@@ -1,0 +1,43 @@
+$primary-color: var(--main-color-pink);
+
+.OrderConfirm {
+  max-width: 980px;
+  margin: 0 auto;
+  min-height: 600px;
+
+  &__Card {
+    width: 100%;
+    margin: 70px auto;
+    display: inline-block;
+    border: 1px solid #d4d5d9;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding-bottom: 48px;
+  }
+
+  &__StatusContainer {
+    padding: 16px;
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .confirmTick {
+    fill: $primary-color;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    max-width: 100%;
+    padding: 20px;
+
+    &__StatusContainer {
+      max-width: 100%;
+    }
+  }
+}

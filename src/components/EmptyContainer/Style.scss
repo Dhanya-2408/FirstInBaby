@@ -1,0 +1,19 @@
+.EmptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+
+  &__Header {
+    margin: 20px auto;
+    color: #282c3f;
+  }
+
+  &__Subhead {
+    margin: 20px auto;
+    line-height: 1.5;
+    color: #696e79;
+    text-align: center;
+  }
+}

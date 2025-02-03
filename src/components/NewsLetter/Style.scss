@@ -1,0 +1,30 @@
+.Newsletter {
+  text-align: center;
+  background: #eaeaea;
+  border-top: 4px solid #efefef;
+
+  .Heading {
+    color: var(--main-color-pink);
+  }
+
+  &__Form {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+
+    // .Form__Input,
+    // .Newsletter__Submit {
+    //   border-radius: 50px;
+    // }
+
+    .Form__Input {
+      border: 1px solid #cbcbcb;
+      background: white;
+      color: #3c3c3c;
+    }
+
+    .Newsletter__Submit {
+      margin: 20px auto;
+    }
+  }
+}

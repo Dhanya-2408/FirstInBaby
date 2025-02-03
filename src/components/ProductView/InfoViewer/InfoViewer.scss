@@ -1,0 +1,89 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Product meta and Product form
+ * ----------------------------------------------------------------------------
+ */
+
+.ProductInfo {
+  .ProductMeta {
+    text-align: center;
+
+    &__PriceList {
+      margin-top: 15px;
+    }
+
+    .Product__Description {
+      border-top: 1px solid #e7e7e7;
+      text-align: left;
+    }
+  }
+
+  .Product__Description {
+    margin: 24px 0;
+    padding-top: 24px;
+  }
+
+  .ProductForm {
+    margin-top: 24px;
+
+    .Form__Header {
+      text-align: left;
+    }
+
+    &__Variants {
+      margin-bottom: 25px;
+    }
+
+    &__Option {
+      position: relative;
+      margin-bottom: 10px;
+      &--labelled {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__Label {
+      display: block;
+      margin-bottom: 8px;
+      em {
+        color: #e95144;
+      }
+    }
+
+    &__LabelLink {
+      // float: right;
+      text-decoration: underline;
+      text-underline-position: under;
+      color: #b9b9b9;
+      margin-bottom: 20px;
+
+      img {
+        vertical-align: middle;
+        padding-right: 10px;
+      }
+    }
+
+    &__AddFav {
+      display: flex;
+      align-items: center;
+      margin: 30px auto;
+
+      &.isActive {
+        color: #ff5bb0;
+        button {
+          color: inherit;
+        }
+      }
+
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1008px) {
+    .ProductMeta {
+      text-align: left;
+    }
+  }
+}

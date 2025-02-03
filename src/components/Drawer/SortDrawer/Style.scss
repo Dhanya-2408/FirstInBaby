@@ -1,0 +1,25 @@
+.Popover__ValueList {
+  list-style: none;
+  padding: 18px 0;
+  overflow: auto;
+  color: #939393 !important;
+
+  .Popover__Value {
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    text-align: left;
+    transition: color 0.2s ease-in-out;
+
+    &:focus {
+      background: white;
+      outline: none;
+    }
+
+    &.is-selected {
+      color: #5c5c5c;
+    }
+  }
+}

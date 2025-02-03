@@ -1,0 +1,67 @@
+import {
+  addCartItem,
+  clearCartItem,
+  decrementCartItem,
+  incrementCartItem,
+} from "./cart.actions";
+import { createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { ICartItem, ICartState } from "./cart.type";
+import { fetchData } from "../../../services/axios";
+import { cartService } from "../../../services/axiosServices";
+
+export const addCartItemsAsync = createAsyncThunk<any, any>(
+  "cart/addCart",
+  async (cartItems, { rejectWithValue }) => {
+    try {
+      const response = await fetchData({
+        ...cartService.addCart,
+        data: cartItems,
+      });
+      return response;
+    } catch (err) {
+      return rejectWithValue(err);
+    }
+  }
+);
+
+export const cartReducer = {
+  addItemToCart: (
+    state: ICartState,
+    { payload }: PayloadAction<ICartItem>
+  ): void => {
+    state.cartItems = addCartItem(state.cartItems, payload);
+  },
+  removeItemFromCart: (
+    state: ICartState,
+    { payload }: PayloadAction<ICartItem>
+  ): void => {
+    state.cartItems = clearCartItem(state.cartItems, payload);
+  },
+  incrementCartItemQuantity: (
+    state: ICartState,
+    { payload }: PayloadAction<ICartItem>
+  ): void => {
+    state.cartItems = incrementCartItem(state.cartItems, payload);
+  },
+  decrementCartItemQuantity: (
+    state: ICartState,
+    action: PayloadAction<ICartItem>
+  ): void => {
+    state.cartItems = decrementCartItem(state.cartItems, action.payload);
+  },
+  setCartItems: (
+    state: ICartState,
+    action: PayloadAction<ICartItem[]>
+  ): void => {
+    state.cartItems = action.payload;
+  },
+  clearCart: (state: ICartState): void => {
+    state.cartItems = [];
+  },
+  setCartDrawVisibilty: (
+    state: ICartState,
+    action: PayloadAction<boolean>
+  ): void => {
+    state.isCartOpen = action.payload;
+  },
+};

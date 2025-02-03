@@ -1,0 +1,31 @@
+.Spec-TableContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  .Spec-Row {
+    position: relative;
+    border-bottom: 1px solid #eaeaec;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    flex-basis: 40%;
+
+    &:nth-child(odd) {
+      margin-right: 10%;
+    }
+  }
+
+  .Spec-RowKey {
+    position: relative;
+    color: #7e818c;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .Spec-RowValue {
+    position: relative;
+    color: #282c3f;
+    line-height: 1.2;
+  }
+}

@@ -1,0 +1,24 @@
+.FlashSale__Container {
+  margin: 20px 0;
+  padding: 8px 15px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  background: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+
+  .svgicon-flashsale {
+    float: left;
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (min-width: 846px) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 846px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
